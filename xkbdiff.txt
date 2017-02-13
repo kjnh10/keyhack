@@ -1,0 +1,164 @@
+--- default.xkb	2017-01-22 01:17:28.212031344 +0900
++++ Xkeymap.xkb	2017-01-26 02:09:14.280851413 +0900
+@@ -42,7 +42,8 @@
+     <AC09> = 46;
+     <AC10> = 47;
+     <AC11> = 48;
+-    <TLDE> = 49;
++    // <TLDE> = 49; //
++    <LWIN> = 49;
+     <LFSH> = 50;
+     <BKSL> = 51;
+     <AB01> = 52;
+@@ -94,7 +95,8 @@
+     <HIRA> = 99;
+     <HENK> = 100;
+     <HKTG> = 101;
+-    <MUHE> = 102;
++    //<MUHE> = 102;
++    <HYPR> = 102;
+     <JPCM> = 103;
+     <KPEN> = 104;
+     <RCTL> = 105;
+@@ -125,7 +127,8 @@
+     <HNGL> = 130;
+     <HJCV> = 131;
+     <AE13> = 132;
+-    <LWIN> = 133;
++    // <LWIN> = 133;
++    <TLDE> = 133;
+     <RWIN> = 134;
+     <COMP> = 135;
+     <STOP> = 136;
+@@ -199,7 +202,8 @@
+      <ALT> = 204;
+     <META> = 205;
+     <SUPR> = 206;
+-    <HYPR> = 207;
++    // <HYPR> = 207;
++    <MUHE> = 207;
+     <I208> = 208;
+     <I209> = 209;
+     <I210> = 210;
+@@ -335,6 +339,19 @@
+         level_name[Level1]= "Base";
+         level_name[Level2]= "Super";
+     };
++    type "MYTYPE" {
++        modifiers= Shift+Lock+Control+Mod3+LevelFive;
++        map[Shift]= Level2;
++        map[Lock]= Level2;
++        map[Mod3]= Level3;
++        map[LevelFive]= Level4;
++        map[Control]= Level5;
++        level_name[Level1]= "Base";
++        level_name[Level2]= "Shift";
++        level_name[Level3]= "Muhenkan";
++        level_name[Level4]= "Henkan";
++        level_name[Level4]= "Control";
++    };
+     type "PC_CONTROL_LEVEL2" {
+         modifiers= Control;
+         map[Control]= Level2;
+@@ -1251,9 +1268,10 @@
+     key <AD12> {         [     bracketleft,       braceleft ] };
+     key <RTRN> {         [          Return ] };
+     key <LCTL> {         [       Control_L ] };
++
+     key <AC01> {
+-        type= "ALPHABETIC",
+-        symbols[Group1]= [               a,               A ]
++        type= "MYTYPE",
++        symbols[Group1]= [               a,               A, a, exclam,Home]
+     };
+     key <AC02> {
+         type= "ALPHABETIC",
+@@ -1272,22 +1290,25 @@
+         symbols[Group1]= [               g,               G ]
+     };
+     key <AC06> {
+-        type= "ALPHABETIC",
+-        symbols[Group1]= [               h,               H ]
++        type= "MYTYPE",
++        symbols[Group1]= [               h,               H, Left, ampersand, BackSpace]
+     };
+     key <AC07> {
+-        type= "ALPHABETIC",
+-        symbols[Group1]= [               j,               J ]
++        type= "MYTYPE",
++        symbols[Group1]= [               j,               J, Down]
+     };
+     key <AC08> {
+-        type= "ALPHABETIC",
+-        symbols[Group1]= [               k,               K ]
++        type= "MYTYPE",
++        symbols[Group1]= [               k,               K,Up]
+     };
+     key <AC09> {
+-        type= "ALPHABETIC",
+-        symbols[Group1]= [               l,               L ]
++        type= "MYTYPE",
++        symbols[Group1]= [               l,               L, Right]
++    };
++    key <AC10> {
++        type= "MYTYPE",
++        symbols[Group1]= [       semicolon,            plus ,semicolon,semicolon,Escape]
+     };
+-    key <AC10> {         [       semicolon,            plus ] };
+     key <AC11> {         [           colon,        asterisk ] };
+     key <TLDE> {
+         type= "PC_ALT_LEVEL2",
+@@ -1332,8 +1353,10 @@
+         symbols[Group1]= [     KP_Multiply,     KP_Multiply,     KP_Multiply,     KP_Multiply,   XF86ClearGrab ]
+     };
+     key <LALT> {         [           Alt_L,          Meta_L ] };
+-    key <SPCE> {         [           space ] };
+-    key <CAPS> {         [     Eisu_toggle,       Caps_Lock ] };
++    key <I253> {         [           space ] };
++    key <SPCE> {         [         Shift_L ] };
++    //key <CAPS> {         [     Eisu_toggle,       Caps_Lock ] };
++    key <CAPS> {         [       Control_L ] };
+     key <FK01> {
+         type= "CTRL+ALT",
+         symbols[Group1]= [              F1,              F1,              F1,              F1, XF86Switch_VT_1 ]
+@@ -1408,10 +1431,11 @@
+         type= "CTRL+ALT",
+         symbols[Group1]= [             F12,             F12,             F12,             F12, XF86Switch_VT_12 ]
+     };
+-    key <AB11> {         [       backslash,      underscore ] };
++    key <AB11> {         [     underscore, backslash       ] };
+     key <KATA> {         [        Katakana ] };
+     key <HIRA> {         [        Hiragana ] };
+-    key <HENK> {         [     Henkan_Mode ] };
++    key <I252> {         [     Henkan_Mode ] };
++    key <HENK> {         [     ISO_Level5_Shift] };
+     key <HKTG> {
+         type= "PC_ALT_LEVEL2",
+         symbols[Group1]= [ Hiragana_Katakana,          Romaji ]
+@@ -1523,7 +1547,8 @@
+     key  <ALT> {         [        NoSymbol,           Alt_L ] };
+     key <META> {         [        NoSymbol,          Meta_L ] };
+     key <SUPR> {         [        NoSymbol,         Super_L ] };
+-    key <HYPR> {         [        NoSymbol,         Hyper_L ] };
++    //key <HYPR> {         [        NoSymbol,         Hyper_L ] };
++    key <HYPR> {         [ Hyper_L ] };
+     key <I208> {         [   XF86AudioPlay ] };
+     key <I209> {         [  XF86AudioPause ] };
+     key <I210> {         [     XF86Launch3 ] };
+@@ -1565,6 +1590,7 @@
+     modifier_map Lock { <CAPS> };
+     modifier_map Mod2 { <NMLK> };
+     modifier_map Mod5 { <LVL3> };
++    modifier_map Mod5 { <HENK> };
+     modifier_map Control { <RCTL> };
+     modifier_map Mod1 { <RALT> };
+     modifier_map Mod4 { <LWIN> };
+@@ -1572,7 +1598,7 @@
+     modifier_map Mod5 { <MDSW> };
+     modifier_map Mod1 { <META> };
+     modifier_map Mod4 { <SUPR> };
+-    modifier_map Mod4 { <HYPR> };
++    modifier_map Mod3 { <HYPR> };
+ };
+ 
+ xkb_geometry "pc(pc105)" {
