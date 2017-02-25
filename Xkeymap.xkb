@@ -1257,7 +1257,8 @@ xkb_symbols "pc+jp+inet(evdev)" {
     };
     key <AD08> {
         type= "MYTYPE",
-        symbols[Group1]= [               i,               I, F2,braceleft,Tab]
+        symbols[Group1]= [i,I, NoSymbol,braceleft,NoSymbol],
+		actions[Group1]= [NoAction(), NoAction(), RedirectKey(key=<FK02>, clearmods=Mod3), NoAction(), RedirectKey(key=<TAB>, clearmods=Control)]
     };
     key <AD09> {
         type= "MYTYPE",
@@ -1273,10 +1274,11 @@ xkb_symbols "pc+jp+inet(evdev)" {
     key <LCTL> {         [       Control_L ] };
     //key <LCTL> {         [Overlay1_Enable] };//
 
+    key <I251> {[a, A] }; // vivaldiやchromeでaがcontrol付きで解釈されてしまう問題を回避 //
     key <AC01> {
         type= "MYTYPE",
-        symbols[Group1]= [               a,               A, a, exclam, NoSymbol],
-		actions[Group1]= [NoAction(), NoAction(), NoAction(), NoAction(), RedirectKey(key=<HOME>, clearmods=Control)]
+        symbols[Group1]= [NoSymbol, NoSymbol, NoSymbol, exclam, NoSymbol],
+		actions[Group1]= [RedirectKey(key=<I251>, clearmods=Control), RedirectKey(key=<I251>, clearmods=Control), NoAction(), NoAction(), RedirectKey(key=<HOME>, clearmods=Control)]
     };
     key <AC02> {
         type= "MYTYPE",
@@ -1602,7 +1604,6 @@ xkb_symbols "pc+jp+inet(evdev)" {
     key <I245> {         [   XF86Bluetooth ] };
     key <I246> {         [        XF86WLAN ] };
     modifier_map Control { <LCTL> };
-    modifier_map Control { <HKTG> };
     modifier_map Shift { <LFSH> };
     modifier_map Shift { <RTSH> };
     modifier_map Mod1 { <LALT> };
