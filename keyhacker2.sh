@@ -11,8 +11,8 @@
 	if [ -n ${PID} ]; then
 		killall xcape
 	fi
-	xcape -e '#65=space'
-	xcape -e '#102=Muhenkan'
+	./xcape/xcape -e '#65=space'
+	./xcape/xcape -e '#102=Muhenkan'
 	# xcape -e '#100=Henkan_Mode'
 
 # xremap

@@ -1318,7 +1318,7 @@ xkb_symbols "pc+jp+inet(evdev)" {
     };
     key <AC10> {
         type= "MYTYPE",
-        symbols[Group1]= [       semicolon,            plus ,semicolon,semicolon,NoSymbol],
+        symbols[Group1]= [       semicolon,            plus ,semicolon, plus,NoSymbol],
 		actions[Group1]= [NoAction(), NoAction(), NoAction(), NoAction(), RedirectKey(key=<ESC>, clearmods=Control)]
     };
     key <AC11> {
@@ -1612,6 +1612,7 @@ xkb_symbols "pc+jp+inet(evdev)" {
     modifier_map Mod5 { <LVL3> };
     modifier_map Mod5 { <HENK> };
     modifier_map Control { <RCTL> };
+    modifier_map Control { <HKTG> };
     modifier_map Mod1 { <RALT> };
     modifier_map Mod4 { <LWIN> };
     modifier_map Mod4 { <RWIN> };
