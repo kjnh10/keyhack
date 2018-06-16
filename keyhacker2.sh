@@ -4,7 +4,7 @@
 	xset r rate 250 30
 
 # compile xkb
-	xkbcomp ~/Dropbox/01_projects/sandbox_for_keyhack/Xkeymap.xkb $DISPLAY
+	xkbcomp ./Xkeymap.xkb $DISPLAY
 
 # OneShot
 	PID=`pidof xcape`

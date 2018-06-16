@@ -1253,7 +1253,8 @@ xkb_symbols "pc+jp+inet(evdev)" {
     };
     key <AD07> {
         type= "MYTYPE",
-        symbols[Group1]= [               u,               U,u,bar,u]
+        symbols[Group1]= [u, U, NoSymbol, bar, u],
+		actions[Group1]= [NoAction(), NoAction(), RedirectKey(key=<FK01>, clearmods=Mod3), NoAction(), NoAction()]
     };
     key <AD08> {
         type= "MYTYPE",
@@ -1262,11 +1263,13 @@ xkb_symbols "pc+jp+inet(evdev)" {
     };
     key <AD09> {
         type= "MYTYPE",
-        symbols[Group1]= [               o,               O, o, braceright,o]
+        symbols[Group1]= [o,O, NoSymbol,braceright, o],
+		actions[Group1]= [NoAction(), NoAction(), RedirectKey(key=<FK03>, clearmods=Mod3), NoAction(), NoAction()]
     };
     key <AD10> {
-        type= "ALPHABETIC",
-        symbols[Group1]= [               p,               P ]
+        type= "MYTYPE",
+        symbols[Group1]= [p, P, NoSymbol, NoSymbol, p],
+		actions[Group1]= [NoAction(), NoAction(), RedirectKey(key=<FK04>, clearmods=Mod3), NoAction(), NoAction()]
     };
     key <AD11> {         [              at,           grave ] };
     key <AD12> {         [     bracketleft,       braceleft ] };
