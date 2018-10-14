@@ -1319,10 +1319,11 @@ xkb_symbols "pc+jp+inet(evdev)" {
         symbols[Group1]= [l, L, NoSymbol, parenright, l],
 		actions[Group1]= [NoAction(), NoAction(), RedirectKey(key=<RGHT>, clearmods=Mod3), NoAction()]
     };
+    key <I250> {[semicolon, plus] }; // terminalでplusが打てない問題を回避 //
     key <AC10> {
         type= "MYTYPE",
-        symbols[Group1]= [       semicolon,            plus ,semicolon, plus,NoSymbol],
-		actions[Group1]= [NoAction(), NoAction(), NoAction(), NoAction(), RedirectKey(key=<ESC>, clearmods=Control)]
+        symbols[Group1]= [NoSymbol, NoSymbol, NoSymbol, plus, NoSymbol],
+        actions[Group1]= [RedirectKey(key=<I250>, clearmods=Control), RedirectKey(key=<I250>, clearmods=Control), NoAction(), NoAction(), RedirectKey(key=<ESC>, clearmods=Control)]
     };
     key <AC11> {
         type= "MYTYPE",
