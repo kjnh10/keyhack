@@ -1306,7 +1306,7 @@ xkb_symbols "pc+jp+inet(evdev)" {
     };
     key <AC07> {
         type= "MYTYPE",
-        symbols[Group1]= [j, J, NoSymbol, apostrophe],
+        symbols[Group1]= [j, J, NoSymbol, apostrophe, j],
         actions[Group1]= [NoAction(), NoAction(), RedirectKey(key=<DOWN>, clearmods=Mod3), NoAction()]
     };
     key <AC08> {
