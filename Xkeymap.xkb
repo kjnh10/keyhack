@@ -1297,7 +1297,7 @@ xkb_symbols "pc+jp+inet(evdev)" {
     };
     key <AC05> {
         type= "MYTYPE",
-        symbols[Group1]= [               g,               G,g,percent]
+        symbols[Group1]= [               g,               G,g,percent,g]
     };
     key <AC06> {
         type= "MYTYPE",
