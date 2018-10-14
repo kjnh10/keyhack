@@ -1237,7 +1237,7 @@ xkb_symbols "pc+jp+inet(evdev)" {
     key <AD03> {
         type= "MYTYPE",
         symbols[Group1]= [               e,               E,e,asciicircum,e],
-		actions[Group1]= [NoAction(), NoAction(), NoAction(), NoAction(), RedirectKey(key=<END>, clearmods=Control)]
+        actions[Group1]= [NoAction(), NoAction(), NoAction(), NoAction(), RedirectKey(key=<END>, clearmods=Control)]
     };
     key <AD04> {
         type= "MYTYPE",
@@ -1254,22 +1254,22 @@ xkb_symbols "pc+jp+inet(evdev)" {
     key <AD07> {
         type= "MYTYPE",
         symbols[Group1]= [u, U, NoSymbol, bar, u],
-		actions[Group1]= [NoAction(), NoAction(), RedirectKey(key=<FK01>, clearmods=Mod3), NoAction(), NoAction()]
+        actions[Group1]= [NoAction(), NoAction(), RedirectKey(key=<FK01>, clearmods=Mod3), NoAction(), NoAction()]
     };
     key <AD08> {
         type= "MYTYPE",
         symbols[Group1]= [i,I, NoSymbol,braceleft,NoSymbol],
-		actions[Group1]= [NoAction(), NoAction(), RedirectKey(key=<FK02>, clearmods=Mod3), NoAction(), RedirectKey(key=<TAB>, clearmods=Control)]
+        actions[Group1]= [NoAction(), NoAction(), RedirectKey(key=<FK02>, clearmods=Mod3), NoAction(), RedirectKey(key=<TAB>, clearmods=Control)]
     };
     key <AD09> {
         type= "MYTYPE",
         symbols[Group1]= [o,O, NoSymbol,braceright, o],
-		actions[Group1]= [NoAction(), NoAction(), RedirectKey(key=<FK03>, clearmods=Mod3), NoAction(), NoAction()]
+        actions[Group1]= [NoAction(), NoAction(), RedirectKey(key=<FK03>, clearmods=Mod3), NoAction(), NoAction()]
     };
     key <AD10> {
         type= "MYTYPE",
         symbols[Group1]= [p, P, NoSymbol, NoSymbol, p],
-		actions[Group1]= [NoAction(), NoAction(), RedirectKey(key=<FK04>, clearmods=Mod3), NoAction(), NoAction()]
+        actions[Group1]= [NoAction(), NoAction(), RedirectKey(key=<FK04>, clearmods=Mod3), NoAction(), NoAction()]
     };
     key <AD11> {         [              at,           grave ] };
     key <AD12> {         [     bracketleft,       braceleft ] };
@@ -1281,7 +1281,7 @@ xkb_symbols "pc+jp+inet(evdev)" {
     key <AC01> {
         type= "MYTYPE",
         symbols[Group1]= [NoSymbol, NoSymbol, NoSymbol, exclam, NoSymbol],
-		actions[Group1]= [RedirectKey(key=<I251>, clearmods=Control), RedirectKey(key=<I251>, clearmods=Control), NoAction(), NoAction(), RedirectKey(key=<HOME>, clearmods=Control)]
+        actions[Group1]= [RedirectKey(key=<I251>, clearmods=Control), RedirectKey(key=<I251>, clearmods=Control), NoAction(), NoAction(), RedirectKey(key=<HOME>, clearmods=Control)]
     };
     key <AC02> {
         type= "MYTYPE",
@@ -1302,34 +1302,36 @@ xkb_symbols "pc+jp+inet(evdev)" {
     key <AC06> {
         type= "MYTYPE",
         symbols[Group1]= [h, H, NoSymbol, ampersand, NoSymbol],
-		actions[Group1]= [NoAction(), NoAction(), RedirectKey(key=<LEFT>, clearmods=Mod3), NoAction(), RedirectKey(key=<BKSP>, clearmods=Control)]
+        actions[Group1]= [NoAction(), NoAction(), RedirectKey(key=<LEFT>, clearmods=Mod3), NoAction(), RedirectKey(key=<BKSP>, clearmods=Control)]
     };
     key <AC07> {
         type= "MYTYPE",
         symbols[Group1]= [j, J, NoSymbol, apostrophe],
-		actions[Group1]= [NoAction(), NoAction(), RedirectKey(key=<DOWN>, clearmods=Mod3), NoAction()]
+        actions[Group1]= [NoAction(), NoAction(), RedirectKey(key=<DOWN>, clearmods=Mod3), NoAction()]
     };
     key <AC08> {
         type= "MYTYPE",
         symbols[Group1]= [k, K, NoSymbol, parenleft, k],
-		actions[Group1]= [NoAction(), NoAction(), RedirectKey(key=<UP>, clearmods=Mod3), NoAction()]
+        actions[Group1]= [NoAction(), NoAction(), RedirectKey(key=<UP>, clearmods=Mod3), NoAction()]
     };
     key <AC09> {
         type= "MYTYPE",
         symbols[Group1]= [l, L, NoSymbol, parenright, l],
-		actions[Group1]= [NoAction(), NoAction(), RedirectKey(key=<RGHT>, clearmods=Mod3), NoAction()]
+        actions[Group1]= [NoAction(), NoAction(), RedirectKey(key=<RGHT>, clearmods=Mod3), NoAction()]
     };
+
     key <I250> {[semicolon, plus] }; // terminalでplusが打てない問題を回避 //
     key <AC10> {
         type= "MYTYPE",
         symbols[Group1]= [NoSymbol, NoSymbol, NoSymbol, plus, NoSymbol],
         actions[Group1]= [RedirectKey(key=<I250>, clearmods=Control), RedirectKey(key=<I250>, clearmods=Control), NoAction(), NoAction(), RedirectKey(key=<ESC>, clearmods=Control)]
     };
+
     key <AC11> {
         type= "MYTYPE",
         symbols[Group1]= [          colon,        asterisk,colon,colon,NoSymbol],
-		actions[Group1]= [NoAction(), NoAction(), NoAction(), NoAction(), RedirectKey(key=<AE11>, clearmods=Control)]
-	};
+        actions[Group1]= [NoAction(), NoAction(), NoAction(), NoAction(), RedirectKey(key=<AE11>, clearmods=Control)]
+    };
     key <TLDE> {
         type= "PC_ALT_LEVEL2",
         symbols[Group1]= [ Zenkaku_Hankaku,           Kanji ]
@@ -1366,12 +1368,12 @@ xkb_symbols "pc+jp+inet(evdev)" {
     };
     key <AB08> {
         type= "MYTYPE",
-        symbols[Group1]= [           comma,            less, comma, bracketleft,comma] 
-	};
+        symbols[Group1]= [           comma,            less, comma, bracketleft,comma]
+    };
     key <AB09> {
         type= "MYTYPE",
         symbols[Group1]= [          period,         greater, period, bracketright,period]
-	};
+    };
     key <AB10> {         [           slash,        question ] };
     key <RTSH> {         [         Shift_R ] };
     key <KPMU> {
