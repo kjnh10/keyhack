@@ -1259,7 +1259,7 @@ xkb_symbols "pc+jp+inet(evdev)" {
     key <AD08> {
         type= "MYTYPE",
         symbols[Group1]= [i,I, NoSymbol,braceleft,NoSymbol],
-        actions[Group1]= [NoAction(), NoAction(), RedirectKey(key=<FK02>, clearmods=Mod3), NoAction(), RedirectKey(key=<TAB>, clearmods=Control)]
+        actions[Group1]= [NoAction(), NoAction(), RedirectKey(key=<FK02>, clearmods=Mod3), NoAction(), NoAction()]
     };
     key <AD09> {
         type= "MYTYPE",
