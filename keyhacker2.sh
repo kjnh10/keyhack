@@ -15,8 +15,5 @@
 	./xcape/xcape -e '#102=Muhenkan'
 	# xcape -e '#100=Henkan_Mode'
 
-# xremap
-	# xremap ~/Dropbox/01_projects/sandbox_for_keyhack/xremap.rb
-
 # TODO
 # xcapeを内部に持ってくる。
