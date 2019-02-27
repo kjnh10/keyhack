@@ -15,5 +15,3 @@
 	./xcape/xcape -e '#102=Muhenkan'
 	# xcape -e '#100=Henkan_Mode'
 
-# TODO
-# xcapeを内部に持ってくる。
