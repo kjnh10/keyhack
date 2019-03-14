@@ -8,5 +8,7 @@ sudo -u xkeysnail xkeysnail ~/go/src/github.com/kjnh10/keyhack/config.py &
 (ref:https://qiita.com/miy4/items/dd0e2aec388138f803c5)
 
 # Other setting
++ Need to install xcape
+
 ## How to auto-startup
 gnome-session-propertiesを開いて登録
